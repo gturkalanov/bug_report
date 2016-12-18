@@ -1,5 +1,5 @@
 <?php
-	$fields = "&fields=issue type,key,summary,priority,created,description,status";
+	$fields = "&maxResults=1000&fields=issue type,key,summary,priority,created,description,status";
 	$url = $_POST['jira_url']."/rest/api/2/search?jql=".$_POST['jira_query'].$fields;
 	$url = str_replace(" ", "%20", $url);
 	$credentials = $_POST['username'].":".$_POST["password"];
